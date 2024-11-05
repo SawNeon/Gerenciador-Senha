@@ -55,6 +55,12 @@ function voltarSenha() {
     atualizarStorage(); 
 }
 
+function playShot() {
+    let audio = document.getElementById('shot');
+    audio.currentTime = 0
+    audio.play();
+}
+
 function atualizarDisplay() {
     document.getElementById("visor-tela-anterior").innerHTML = senhaAnterior ? `Senha Anterior: ${senhaAnterior}` : "Senha Anterior: --";
     document.getElementById("numero-caixa-anterior").innerHTML = ultimoCaixaAnterior || '--';
