@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Imports -->
+    <link rel="stylesheet" href="../style/style.css" type="text/css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap" rel="stylesheet">
+    
+    <title>Gerenciamento</title>
+    <script src="../controller/funcoes.js" async></script>
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <div class="nome-banco">SEDUC</div>
+            <div class="logoPng"><img src="../assets/Logo.png" alt="logoPng"></div>
+        </header>
+
+        <div class="content">
+            <div class="senha-chamada">
+                <h1 id="visor-tela">Senha Atual: --</h1><br>
+                <div class="conteudo-senha-chamada">
+                    dirija-se ao <span id="numero-caixa-atual" class="conteudo-caixaA">--</span>
+                </div>
+            </div>
+            <div class="senha-chamada">
+                <h1 id="visor-tela-anterior">Senha Anterior: --</h1><br>
+                <div class="conteudo-senha-chamada">
+                dirija-se ao <span id="numero-caixa-anterior" class="conteudo-caixaA">--</span> 
+                </div>
+            </div>
+            <div class="senha-chamada">
+                <h1 id="visor-tela-proxima">Próxima Senha: --</h1><br>
+            </div>
+            <div class="para-caixas">
+                <div id="buttons-caixa" class="grupo-de-botoes">
+                    <button class="botoes" onclick="chamarSenha('Guichê 1')">Guichê 1</button>
+                    <button class="botoes" onclick="chamarSenha('Guichê 2')">Guichê 2</button>
+                    <button class="botoes" onclick="chamarSenha('Guichê 3')">Guichê 3</button>
+                    <button class="botoes" onclick="chamarSenha('Guichê 4')">Guichê 4</button>
+                    <button class="botoes" onclick="chamarSenha('Guichê 5')">Guichê 5</button>
+                    <button class="botoes" onclick="chamarSenha('Guichê 6')">Guichê 6</button>
+                    <button class="botoes" onclick="chamarSenha('Guichê 7')">Guichê 7</button>
+                    <button class="botoes" onclick="chamarSenha('Guichê 8')">Guichê 8</button>
+                    <button class="botoes" onclick="chamarSenha('Guichê 9')">Guichê 9</button>
+                    <button class="botoes" onclick="chamarSenha('Guichê 10')">Guichê 10</button>
+                    <button id="voltar-senha" class="botoes" style="font-size: 12px;"onclick="voltarSenha()">Voltar Senha</button>
+                </div>
+            </div>
+            <div class="gerar-senhas">
+                <h1>Ir para página de visualização</h1>
+                <button id="PaginaViwer" class="botoes" onclick="abrirViewer()">Visualização</button>
+                <h1>Gerar Senhas</h1>
+                <input type="number" id="quantidade-senhas" placeholder="Quantidade" min="1" style="height: 45px; font-size: 16px; border-radius: 10px; color: black; text-align: center;"/>
+                <button id="gerar-senhas" class="botoes" onclick="gerarSenhas()">Gerar Senhas</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function abrirViewer() {
+            const viewerWindow = window.open("caixa.html", "_blank");
+            viewerWindow.onload = function() {
+                viewerWindow.opener = window;
+            };
+        }
+    </script>
+</body>
+</html>

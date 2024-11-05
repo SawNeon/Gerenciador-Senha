@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../style/style.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap" rel="stylesheet">
+    
+    <title>Viwer</title>
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <div class="nome-banco">SEDUC</div>
+            <div class="logoPng"><img src="../assets/Logo.png" alt="logoPng"></div>
+        </header>
+        
+        <div class="content">
+            <div class="senha-chamadaA" style="height: 320px; width: 81%;">
+                <h1>Senha Atual:</h1>
+                <h1 id="visor-tela" style="font-size: 7rem;">--</h1><br>
+                <div class="conteudo-senha-chamadaA">
+                    dirija-se ao <span id="numero-caixa-atual" class="conteudo-caixaA">--</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content" style="display: flex; justify-content: center; align-items: flex-start;">
+            <div class="senha-chamadaA" style="padding: 2rem; width: 40%; margin: 1rem; height: 320px;">
+                <h1>Senha Anterior:</h1>
+                <h1 id="visor-tela-anterior" style="font-size: 7rem;">--</h1><br>
+                <div class="conteudo-senha-chamadaA">
+                    dirija-se ao <span id="numero-caixa-anterior" class="conteudo-caixaA">--</span>
+                </div>
+            </div>
+            <div class="senha-chamadaA" style="padding: 2rem; width: 40%; margin: 1rem; height: 320px;">
+                <h1>Próxima Senha:</h1>
+                <h1 id="visor-tela-proxima" style="font-size: 7rem;">--</h1><br>
+            </div>
+        </div>
+    </div>
+
+    <script src="../controller/funcoes.js" async></script>
+    <script>
+        window.addEventListener('storage', function(event) {
+            if (event.key === "senhaAtual" || 
+                event.key === "senhaAnterior" || 
+                event.key === "senhaProxima" || 
+                event.key === "numeroCaixaAtual" || 
+                event.key === "numeroCaixaAnterior") {
+                atualizarExibicao();
+            }
+        });
+
+
+        atualizarExibicao();
+    </script>
+</body>
+</html>

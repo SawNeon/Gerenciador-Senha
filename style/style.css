@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--branco);
+}
+
+body {
+    --fundo: #e7ffff;
+    --branco: white;
+    --fundo-div: #202124;
+    background: var(--fundo);
+}
+
+.container header {
+    background: var(--fundo-div);
+    height: 200px;
+    margin-top: 0.75rem;
+}
+
+.logoPng {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoPng img {
+    width: 100px;
+    height: auto;
+}
+
+
+.nome-banco {
+    display: flex;
+    justify-content: center;
+    font-size: 1.75rem;
+    padding: 15px 0px;
+    font-weight: 400;
+}
+
+.senha-chamadaA {
+    padding: 2rem 0;
+    width: 90%;
+    margin: 1rem auto;
+    background: var(--fundo-div);
+    text-align: center;
+    border-radius: 20px;
+}
+.senha-chamadaA h1 {
+    font-size: 3rem;
+    margin-bottom: 0%;
+}
+
+.conteudo-senha-chamadaA {
+    padding-bottom: 5rem;
+    color: #B1B1B1;
+    font-size: 2rem;
+}
+
+.senha-chamada {
+    padding: 0.5rem 0;
+    width: 90%;
+    margin: 1rem auto;
+    background: var(--fundo-div);
+    text-align: center;
+    border-radius: 20px;
+}
+.senha-chamada h1 {
+    font-size: 2rem;
+    margin-bottom: 0%;
+}
+
+.conteudo-senha-chamada {
+    padding-bottom: 2rem;
+    color: #B1B1B1;
+    font-size: 2rem;
+}
+
+.gerar-senhas {
+    background-color: var(--fundo-div);
+    border-radius: 20px;
+    font-size: 10px;
+    text-align: center;
+    padding: 0.5rem 0;
+    width: 45%;
+    height: 150px;
+    margin: 1rem auto;
+}
+
+.conteudo-caixa {
+    font-size: 1rem;
+    padding-left: .6rem;
+}
+.conteudo-caixaA {
+    font-size: 2rem;
+    padding-left: .6rem;
+}
+
+.container-final {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: center;
+}
+
+.para-clientes {
+    background: var(--fundo-div);
+    height: 200px;
+    margin-top: 0.75rem;
+    padding: 2rem 0;
+}
+
+.para-caixas {
+    padding: 4rem 2rem;
+    background: var(--fundo-div);
+    margin-left: 30px;
+    border-radius: 20px;
+    display: grid;
+}
+
+.title-content-final {
+    font-weight: 400;
+    color: rgb(141, 141, 141);
+}
+
+.subtitle-content-final {
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+.botoes {
+    color: rgba(32, 33, 36, 0.88);
+    text-decoration: none;
+    transition: filter 0.3s;
+    border-radius: 10px;
+    align-items: center;
+    height: 2rem;
+    border: none;
+    font-size: 1rem; 
+}
+
+#btn-rapido, #btn-comum {
+    margin-top: 2rem;
+    width: 49%;
+    align-items: center;
+}
+
+#btn-prioridade {
+    margin-top: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.visu {
+    font-size: 300px;
+    font-weight: bold;
+}
+
+
+.content-final-div h1 {
+    font-size: 6rem;
+}
+
+.para-caixas h1 {
+    margin-top: -2.45rem;
+}
+
+.para-caixas div {
+    display: flex;
+    justify-content: center;
+}
+
+#buttons-caixa {
+    margin-top: -28px;
+}
+
+.para-caixas .grupo-de-botoes button {
+    margin-left: 0.5rem;
+}
+
+button {
+    width: 20%;
+}
+
+button:hover {
+    filter: brightness(1.2);
+}
+
